@@ -1,0 +1,73 @@
+### 1st user register
+
+POST http://localhost:3000/register/
+Content-Type: application/json
+
+{
+    "username": "prathap@123",
+    "name": "prathap",
+    "password": "prathap@567",
+    "gender": "male",
+    "location": "rameswaram"
+}
+
+### 2nd user login
+POST http://localhost:3000/login/
+Content-Type: application/json
+
+{
+    "username": "prathap@123",
+    "password": "prathap@567"
+}
+
+### 3rd get states
+GET http://localhost:3000/states/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InByYXRoYXBAMTIzIiwiaWF0IjoxNjIyODU5ODU3fQ.iK77HWD0c__6_y2k1ORrUkwVU3VLVFKGUT9YABSbjaA
+
+### 4th get state
+GET http://localhost:3000/states/1/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InByYXRoYXBAMTIzIiwiaWF0IjoxNjIyODU5ODU3fQ.iK77HWD0c__6_y2k1ORrUkwVU3VLVFKGUT9YABSbjaA
+
+
+### 5th add district
+POST http://localhost:3000/districts/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InByYXRoYXBAMTIzIiwiaWF0IjoxNjIyODU5ODU3fQ.iK77HWD0c__6_y2k1ORrUkwVU3VLVFKGUT9YABSbjaA
+Content-Type: application/json
+
+{
+  "districtName": "Bagalkot",
+  "stateId": 3,
+  "cases": 2323,
+  "cured": 2000,
+  "active": 315,
+  "deaths": 8
+}
+
+### 6th
+GET http://localhost:3000/districts/1/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InByYXRoYXBAMTIzIiwiaWF0IjoxNjIyODU5ODU3fQ.iK77HWD0c__6_y2k1ORrUkwVU3VLVFKGUT9YABSbjaA
+
+### 7th
+DELETE http://localhost:3000/districts/1/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InByYXRoYXBAMTIzIiwiaWF0IjoxNjIyODU5ODU3fQ.iK77HWD0c__6_y2k1ORrUkwVU3VLVFKGUT9YABSbjaA
+
+### 8th
+
+PUT http://localhost:3000/districts/2/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InByYXRoYXBAMTIzIiwiaWF0IjoxNjIyODU5ODU3fQ.iK77HWD0c__6_y2k1ORrUkwVU3VLVFKGUT9YABSbjaA
+Content-Type: application/json
+
+{
+  "districtName": "Nadia",
+  "stateId": 3,
+  "cases": 9628,
+  "cured": 6524,
+  "active": 3000,
+  "deaths": 104
+}
+
+
+### 9th
+GET http://localhost:3000/states/1/stats/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InByYXRoYXBAMTIzIiwiaWF0IjoxNjIyODU5ODU3fQ.iK77HWD0c__6_y2k1ORrUkwVU3VLVFKGUT9YABSbjaA
+
